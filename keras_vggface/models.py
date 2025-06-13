@@ -35,7 +35,7 @@ def VGG16(include_top=True, weights='vggface',
 
     if input_tensor is not None:
         try:
-            from keras_applications.imagenet_utils import get_source_inputs
+            from keras.utils import get_source_inputs
             inputs = get_source_inputs(input_tensor)
         except ImportError:
             inputs = img_input
