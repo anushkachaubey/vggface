@@ -4,7 +4,7 @@
 - Resnet50 and VGG16  are modified architectures from Keras Application folder. [Keras](https://keras.io)
 
 - Squeeze and excitation block is taken from  [Squeeze and Excitation Networks in
- Keras](https://github.com/titu1994/keras-squeeze-excite-network) and modified.
+ Keras](https://github.com/titu1994/keras-squeeze-excite-network) and modified. 
 
 '''
 
@@ -443,8 +443,8 @@ def SENET50(include_top=True, weights='vggface',
 
     x = Conv2D(
         64, (7, 7), use_bias=False, strides=(2, 2), padding='same',
-        name='conv1/7x7_s2')(img_input)
-    x = BatchNormalization(axis=bn_axis, name='conv1/7x7_s2/bn',epsilon=bn_eps)(x)
+        name='conv1_7x7_s2')(img_input)
+    x = BatchNormalization(axis=bn_axis, name='conv1_7x7_s2_bn',epsilon=bn_eps)(x)
     x = Activation('relu')(x)
     x = MaxPooling2D((3, 3), strides=(2, 2))(x)
 
