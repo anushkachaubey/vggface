@@ -35,12 +35,12 @@ def VGG16(include_top=True, weights='vggface',
 
     
     if input_tensor is None:
-        inputs = Input(shape=input_shape)
+        img_input = Input(shape=input_shape)
     else:
         if not K.is_keras_tensor(input_tensor):
-            inputs = Input(tensor=input_tensor, shape=input_shape)
+            img_input = Input(tensor=input_tensor, shape=input_shape)
         else:
-            inputs = input_tensor
+            img_input = input_tensor
 
 
 
