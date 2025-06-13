@@ -36,12 +36,16 @@ def VGG16(include_top=True, weights='vggface',
     img_input = None
     if input_tensor is None:
         img_input = Input(shape=input_shape)
+        print("first if",img_input)
     else:
         if not K.is_keras_tensor(input_tensor):
             img_input = Input(tensor=input_tensor, shape=input_shape)
+            print("2nd if",img_input)
         else:
+            print("last else",img_input)
             img_input = input_tensor
 
+    print(img_input)
 
 
     # Block 1
