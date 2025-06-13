@@ -33,7 +33,7 @@ def VGG16(include_top=True, weights='vggface',
                                       data_format=K.image_data_format(),
                                       require_flatten=include_top)
 
-    
+    img_input = None
     if input_tensor is None:
         img_input = Input(shape=input_shape)
     else:
